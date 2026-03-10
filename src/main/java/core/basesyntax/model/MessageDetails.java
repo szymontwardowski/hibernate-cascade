@@ -16,7 +16,6 @@ public class MessageDetails {
     private String sender;
     private LocalDateTime sentTime;
 
-    // Gettery i settery pozostają bez zmian
     public Long getId() {
         return id;
     }

@@ -58,10 +58,14 @@ public class MessageDetailsDaoImpl extends AbstractDao implements MessageDetails
             session.remove(messageDetails);
             transaction.commit();
         } catch (Exception e) {
-            if (transaction != null) transaction.rollback();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             throw new RuntimeException("Can't remove details", e);
         } finally {
-            if (session != null) session.close();
+            if (session != null) {
+                session.close();
+            }
         }
     }
 }
